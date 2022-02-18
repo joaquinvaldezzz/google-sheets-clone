@@ -1,0 +1,43 @@
+$table-font-size: 0.75rem;
+$table-border-color: #cbd5e1;
+$table-background-color: #f1f5f9;
+$row-focus-color: #2563eb;
+
+main {
+  min-width: 100rem;
+  overflow-x: auto;
+}
+
+.sheets {
+  width: 100%;
+  font-size: $table-font-size;
+  white-space: nowrap;
+  table-layout: fixed;
+}
+
+.col-letter,
+.row-number,
+.row-data {
+  border: 1px solid $table-border-color;
+}
+
+.col-letter,
+.row-number {
+  font-weight: 400;
+  text-align: center;
+  background-color: $table-background-color;
+  user-select: none;
+}
+
+.col-letter:first-of-type {
+  width: 2.5rem;
+}
+
+.row-data {
+  width: 100%;
+  padding: 2px;
+
+  &:focus {
+    outline: 2px solid $row-focus-color;
+  }
+}
