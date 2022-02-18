@@ -1,6 +1,6 @@
-# Vanilla HTML, CSS, and JavaScript Template
+# Google Sheets Clone
 
-A simple vanilla template for static website using [Vite](https://vitejs.dev) and
+This Google Sheets Clone uses [Vite](https://vitejs.dev) and
 [PostCSS](https://github.com/postcss/postcss).
 
 ## Run Locally
@@ -8,13 +8,13 @@ A simple vanilla template for static website using [Vite](https://vitejs.dev) an
 1. Download or clone the project
 
    ```sh
-   git clone https://github.com/joaquin-wakin/vanilla-html.git
+   git clone https://github.com/joaquin-wakin/google-sheets.git
    ```
 
 2. Go to the project directory
 
    ```sh
-   cd vanilla-html
+   cd google-sheets-clone
    ```
 
 3. Install dependencies
