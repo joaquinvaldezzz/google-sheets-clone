@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import path from 'path';
 
 export default defineConfig({
   server: {
@@ -7,14 +6,9 @@ export default defineConfig({
     open: true,
   },
   build: {
-    outDir: path.join(__dirname, 'dist'),
+    outDir: './dist',
     rollupOptions: {
-      input: { index: path.resolve(__dirname, 'index.html') },
-      output: {
-        assetFileNames: 'assets/[name].[ext]',
-        chunkFileNames: 'assets/[name].js',
-        entryFileNames: 'assets/[name].js',
-      },
+      input: { index: './index.html' },
     },
     emptyOutDir: true,
   },
