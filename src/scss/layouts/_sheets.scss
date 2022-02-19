@@ -1,7 +1,7 @@
 $table-font-size: 0.75rem;
 $table-border-color: #cbd5e1;
-$table-background-color: #f1f5f9;
-$row-focus-color: #2563eb;
+$table-background-color: #f8f9fa;
+$row-focus-color: #3871e0;
 
 main {
   min-width: 100rem;
@@ -13,6 +13,13 @@ main {
   font-size: $table-font-size;
   white-space: nowrap;
   table-layout: fixed;
+}
+
+.table-header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .col-letter,
@@ -35,9 +42,10 @@ main {
 
 .row-data {
   width: 100%;
-  padding: 2px;
+  padding: 2px 4px;
 
   &:focus {
     outline: 2px solid $row-focus-color;
+    outline-offset: -2px;
   }
 }
