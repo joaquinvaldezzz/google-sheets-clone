@@ -5,15 +5,15 @@ $focus-color: #3871e0;
 $footer-bg-color: #f2f3f4;
 
 .table-container {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .table {
   width: 100%;
-  min-width: 75rem;
+  min-width: 100rem;
   font-size: $table-font-size;
+  line-height: 1.25rem;
+  white-space: nowrap;
   table-layout: fixed;
 }
 
@@ -63,13 +63,13 @@ $footer-bg-color: #f2f3f4;
   padding: 0 2.5rem;
   background-color: $footer-bg-color;
   overflow: hidden;
-
-  > :not([hidden]) ~ :not([hidden]) {
-    margin-left: 1rem;
-  }
+  user-select: none;
 }
 
 .footer-buttons {
+  display: flex;
+  align-items: center;
+
   > :not([hidden]) ~ :not([hidden]) {
     margin-left: 0.25rem;
   }
@@ -85,19 +85,34 @@ $footer-bg-color: #f2f3f4;
   }
 }
 
+.footer-tabs {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  margin-left: 1rem;
+}
+
 .footer-tab {
   display: flex;
   align-items: center;
   padding: 0.75rem 1rem;
-  color: #3c7e40;
-  background-color: #fff;
-  box-shadow: 0 0 6px rgba(0 0 0 / 25%);
 
   &:focus {
     outline: 0;
   }
 
+  &.active {
+    color: #3c7e40;
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0 0 0 / 25%);
+  }
+
   > i {
     margin-left: 0.5rem;
   }
+}
+
+.data-center {
+  text-align: center;
 }
