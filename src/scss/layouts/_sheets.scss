@@ -1,17 +1,19 @@
 $table-font-size: 0.75rem;
 $table-border-color: #cbd5e1;
 $table-background-color: #f8f9fa;
-$row-focus-color: #3871e0;
+$focus-color: #3871e0;
+$footer-bg-color: #f2f3f4;
 
-main {
-  min-width: 100rem;
-  overflow-x: auto;
+.table-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
 }
 
-.sheets {
+.table {
   width: 100%;
+  min-width: 75rem;
   font-size: $table-font-size;
-  white-space: nowrap;
   table-layout: fixed;
 }
 
@@ -45,7 +47,57 @@ main {
   padding: 2px 4px;
 
   &:focus {
-    outline: 2px solid $row-focus-color;
+    outline: 2px solid $focus-color;
     outline-offset: -2px;
+  }
+}
+
+.footer-tab-group {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 2.5rem;
+  background-color: $footer-bg-color;
+  overflow: hidden;
+
+  > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 1rem;
+  }
+}
+
+.footer-buttons {
+  > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0.25rem;
+  }
+}
+
+.footer-button {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+
+  &:focus {
+    outline: 2px solid $focus-color;
+  }
+}
+
+.footer-tab {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #3c7e40;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0 0 0 / 25%);
+
+  &:focus {
+    outline: 0;
+  }
+
+  > i {
+    margin-left: 0.5rem;
   }
 }
