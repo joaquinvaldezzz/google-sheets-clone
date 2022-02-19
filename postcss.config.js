@@ -11,6 +11,8 @@ module.exports = {
         const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]+/g) || [];
         return broadMatches.concat(innerMatches);
       },
+      fontFace: true,
+      keyframes: true,
     },
     'postcss-sort-media-queries': {},
     'postcss-sorting': {
