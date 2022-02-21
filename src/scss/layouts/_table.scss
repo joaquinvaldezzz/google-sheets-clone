@@ -1,5 +1,5 @@
 $font-size: 0.75rem;
-$table-border-color: #cbd5e1;
+$table-border-color: #e2e3e3;
 $table-background-color: #f8f9fa;
 $focus-color: #3871e0;
 $footer-bg-color: #f2f3f4;
@@ -24,32 +24,28 @@ $footer-bg-color: #f2f3f4;
   left: 0;
 }
 
-.col-letter,
-.row-number,
 .row-data {
+  width: 100%;
+  padding: 0 4px;
   border: 1px solid $table-border-color;
+
+  &:focus {
+    outline: 2px solid $focus-color;
+    outline-offset: -2px;
+  }
 }
 
 .col-letter,
 .row-number {
   font-weight: 400;
   text-align: center;
+  border: 1px solid #c0c0c0;
   background-color: $table-background-color;
   user-select: none;
 }
 
 .col-letter:first-of-type {
   width: 2.5rem;
-}
-
-.row-data {
-  width: 100%;
-  padding: 2px 4px;
-
-  &:focus {
-    outline: 2px solid $focus-color;
-    outline-offset: -2px;
-  }
 }
 
 .footer-tab-group {
