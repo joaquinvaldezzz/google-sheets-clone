@@ -1,8 +1,35 @@
+@use 'sass:list';
+
 $font-size: 0.75rem;
 $table-border-color: #e2e3e3;
 $table-background-color: #f8f9fa;
 $focus-color: #3871e0;
 $footer-bg-color: #f2f3f4;
+
+// Other colors
+$cell-bg-colors: (
+  gray: #999,
+  light-gray: #ccc,
+  dark-gray: #434343,
+  green: #49742c,
+  light-green: #bdd6ac,
+  blue: #4b77d1,
+  light-blue: #ccd9f6,
+  light-yellow: #fbe6a2,
+  navy: #264e5a,
+  light-navy: #a9c3c8,
+  red: #d98177,
+);
+
+@each $cell-bg-color, $index in $cell-bg-colors {
+  .bg-#{$cell-bg-color} {
+    background-color: $index;
+  }
+}
+
+.text-white {
+  color: #fff;
+}
 
 .table-container {
   overflow-x: auto;
@@ -56,9 +83,8 @@ $footer-bg-color: #f2f3f4;
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 0 2.5rem;
+  padding-left: 2.5rem;
   background-color: $footer-bg-color;
-  overflow: hidden;
   user-select: none;
 }
 
@@ -87,10 +113,12 @@ $footer-bg-color: #f2f3f4;
   align-items: center;
   width: 100%;
   margin-left: 1rem;
+  overflow-x: auto;
 }
 
 .footer-tab {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   padding: 0.75rem 1rem;
 
@@ -102,6 +130,10 @@ $footer-bg-color: #f2f3f4;
     color: #3c7e40;
     background-color: #fff;
     box-shadow: 0 0 6px rgba(0 0 0 / 25%);
+  }
+
+  > span {
+    flex-shrink: 0;
   }
 
   > i {
