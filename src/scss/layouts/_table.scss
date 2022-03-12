@@ -22,7 +22,7 @@ $cell-bg-colors: (
 );
 
 @each $cell-bg-color, $index in $cell-bg-colors {
-  .bg-#{$cell-bg-color} {
+  .bg-#{'' + $cell-bg-color} {
     background-color: $index;
   }
 }
